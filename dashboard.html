@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="box">
+    <h2>Add Expense</h2>
+    <form method="post">
+        <input name="amount" placeholder="Amount" required>
+        <input name="category" placeholder="Category" required>
+        <button>Add</button>
+    </form>
+
+    <h3>Category Summary</h3>
+    <ul>
+        {% for c,a in data %}
+        <li>{{c}} : ₹{{a}}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/logout">Logout</a>
+</div>
+</body>
+</html>
